@@ -26,11 +26,11 @@ def process_uploaded_file(uploaded_file):
 
 def main():
     st.title("WriteRight")
-    st.write("Enter a sentence or upload a text file (.txt) to check grammar and spelling.")
+    st.subheader("Enter a sentence or upload a text file (.txt) to check its grammar and spelling.")
 
     input_text = st.text_area("Enter your sentence:", height=100)
 
-    uploaded_file = st.file_uploader("Upload a text file (.txt):")
+    uploaded_file = st.file_uploader("Upload a text file (.txt):",['txt'])
 
     if st.button("Correct"):
         if input_text:
